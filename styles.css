@@ -1,0 +1,91 @@
+body {
+    background-image: url("http://fidelioarts.com/wp-content/uploads/2015/01/yuja-wang-ian-douglas-2.jpg");
+    background-attachment: fixed;
+    color: white;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    background-size: cover;
+    background-color: rgba(255, 0, 0, 0.45); /*this is really helpful! Keeps the background image scaling appropriately*/
+    padding: 0;
+    margin: 0; /*Using this with the body made the extra space around the nav bar go away */
+}
+
+nav, h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+.bio_page {
+    padding-left: 47%;
+    padding-right: 8%;
+    letter-spacing: .1em;
+}
+
+#name {
+    padding-left: 47%;
+    padding-right: 8%;
+    letter-spacing: .5em;
+}
+
+footer {
+    font-size: 14px;
+    text-align: right;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+
+nav {
+	width: 100%;
+	float: left;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+	padding-top: 4%;
+    padding-bottom: 4%;
+ }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 25%;
+    margin-bottom: 30%;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    float: left;
+    font-size: 1em;
+    letter-spacing: 1em;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+}
+
+nav ul li a {
+    display: block;
+    margin: 0;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    -o-transition: 1s; /*These properties are what make the hover fade in and out*/
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+
+
+/* Change the link color to #111 (black) on hover */
+nav ul li a:hover {
+    background-color: rgba(255, 0, 0, .9);
+    padding-top: 30%; /* this is what I used to make the nav bar taller in height */
+    padding-bottom: 30%;
+}
+/* Change the link color to #111 (black) on hover */
+p {
+    display: inline-block;
+}
