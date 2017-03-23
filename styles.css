@@ -1,8 +1,10 @@
 #page1 {
-    background-image: url(http://fidelioarts.com/wp-content/uploads/2015/01/yuja-wang-ian-douglas-2.jpg);
-    background-attachment: fixed;
     color: white;
     font-size: 100%;
+    background-image: /*This is how I tinted the background image!*/
+      /*linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
+      url(http://fidelioarts.com/wp-content/uploads/2015/01/yuja-wang-ian-douglas-2.jpg); /*go to color picker to find colors in an image*/
+    background-attachment: fixed;
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
     background-size: cover; /*this is really helpful! Keeps the background image scaling appropriately*/
@@ -11,7 +13,7 @@
 }
 
 #page2 {
-    background-image: url(http://4.bp.blogspot.com/-RQDBdTa71f4/UTdcQSFxq3I/AAAAAAAAQpw/DLRbtUl1Jck/s1600/Hilary+Hahn.jpg);
+    background: url(http://4.bp.blogspot.com/-RQDBdTa71f4/UTdcQSFxq3I/AAAAAAAAQpw/DLRbtUl1Jck/s1600/Hilary+Hahn.jpg); /*needed to switch from background-image to just background to text a background around the text box as well*/
     background-attachment: fixed;
     color: rgb(44, 43, 41);
     font-size: 100%;
@@ -27,10 +29,23 @@
     padding-bottom: 7%;
 }
 
-.bio_page {
-    padding-left: 6%;
-    padding-top: 2%;
-    padding-right: 50%;
+#page2_text {
+    background-color: rgba(108,83,84, .65);
+    position: absolute;
+    color: rgba(255, 255, 255, .7);
+    font-size: 15px;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-right: 4%;
+    padding-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 60%;
+    margin-bottom: 0;
+     /*change this to change the actual size of the text box */
+}
+
+#page2_text li {
+    font-family: 'Roboto Slab', serif;
 }
 
 p {
@@ -96,13 +111,12 @@ nav ul li a {
     transition: 1s;
 }
 
-/* Change the link color to #111 (black) on hover */
 nav ul li a:hover {
     background-color: rgba(255, 0, 0, .9);
     padding-top: 30%; /* this is what I used to make the nav bar taller in height */
     padding-bottom: 30%;
 }
-/* Change the link color to #111 (black) on hover */
+
 p {
     display: inline-block;
 }
