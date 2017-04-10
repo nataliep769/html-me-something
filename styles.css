@@ -3,13 +3,19 @@
     font-size: 100%;
     background-image: /*This is how I tinted the background image!*/
       /*linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
-      url(http://fidelioarts.com/wp-content/uploads/2015/01/yuja-wang-ian-douglas-2.jpg); /*go to color picker to find colors in an image*/
-    background-attachment: fixed;
+      url(http://i64.tinypic.com/4uzx8g.jpg); /*go to color picker to find colors in an image*/
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
+    background-repeat: no-repeat;
     background-size: cover; /*this is really helpful! Keeps the background image scaling appropriately*/
     padding: 0;
     margin: 0; /*Using this with the body made the extra space around the nav bar go away */
+    /*Ideally, I should probably crop the images that I want in photoshop so that they are all equal */
+    /*alter so that white blogspace scrolls up over the background image*/
+    /*crop the top of the image so it's more widescreen */
+    /*choose horizontal images for cover photos */
+    /*make another nav bar that goes above the photo? Not sure */
+    /*Put a quote over the cover image? Put a quote directly underneath the image? YUJA WANG: PIANIST*/
 }
 
 #page2 {
@@ -48,6 +54,11 @@
     font-family: 'Roboto Slab', serif;
 }
 
+a, a:visited {
+    text-decoration: none; /*these two propeties make the link not change color after it has been visited */
+    color: inherit;
+}
+
 p {
     font-family: 'Roboto Slab', serif;
 }
@@ -71,28 +82,20 @@ footer {
 nav {
 	width: 100%;
 	float: left;
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-	padding-top: 4%;
-    padding-bottom: 4%;
  }
 
 nav ul {
     list-style: none;
     margin: 0;
-    margin-top: 25%;
+    margin-top: 18.5%;
     margin-bottom: 30%;
     padding: 0;
-    width: 100%;
 }
 
 nav ul li {
     float: left;
-    font-size: 1em;
-    letter-spacing: 1em;
-    margin: 0;
-    padding: 0;
+    font-size: .9em;
+    letter-spacing: 1.1em;
     width: 25%;
 }
 
@@ -113,10 +116,8 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: rgba(255, 0, 0, .9);
-    padding-top: 30%; /* this is what I used to make the nav bar taller in height */
-    padding-bottom: 30%;
+    padding-top: 25%; /* this is what I used to make the nav bar taller in height */
+    padding-bottom: 25%;
 }
 
 p {
-    display: inline-block;
-}
