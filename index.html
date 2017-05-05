@@ -1,24 +1,83 @@
 <!DOCTYPE html>
-<!--Maybe have images of composers in a banner at the top -->
-<!-- I could have read more ... sections that linked to pages about each composer -->
 <!-- How to add functionality between pages? -->
+<!-- Way to make articles scroll -->
+<!-- Add about section at bottom or leave comment section -->
+<!-- need to link to the javascript file -->
+<!-- perhaps keep the number of words for each header description equal. Figure out a way to do this in Java/Python -->
+<!-- Can specify image height and width in HTML in source tag -->
 <html>
     <head>
         <meta charset = "UTF-8">
-        <title>Natalie's Page</title>
+        <title>Between the Notes</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
     </head>
-    <body id = "page1">
-    <div class = "background-tint">
-        <nav>
+    <body>
+        <nav id = "upper_nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="music.html">Music</a></li>
+                <li><a href="index.html">Between the Notes</a></li>
+            <ul>
+        </nav>
+        <nav id = "mid_nav">
+            <ul>
+                <li>|a classical music blog|</li>
+            <ul>
+        </nav>
+        <nav id = "lower_nav">
+            <ul>
+                <li><a href="blogposts.html">Articles</a></li>
                 <li><a href="contact.asp">Contact</a></li>
-                <li><a href="about.asp">About</a></li>
+                <li><a href="index.html">About</a></li>
             </ul>
         </nav>
-    </div>
+        <nav id = "bottom_nav">
+
+        </nav>
+        <div class = "blogposts_container">
+        <article>
+            <div class = "crop">
+                <img src="C:\Users\Natalie\code\html-me-something\Hilary Hahn.jpg">
+            </div>
+            <h1>Decay in ‘Decasia’</h1>
+            <p>Michael Gordon’s score for “Decasia” is viscerally unpleasant. But that’s not to say that the listening experience was devoid of value.</p>
+        </article>
+        <article>
+            <div class = "crop">
+                <img src="http://alegriamagazine.com/alegriamagazine/wp-content/uploads/2014/01/gustavo-dudamel.jpg">
+            </div>
+            <h1>The One Ring</h1>
+            <p>Berlioz's Treatise on Instrumentation serves as one of the leading resources for composers on how to write evocative music for full orchestra.</p>
+        </article>
+        <article>
+            <div class = "crop">
+                <img src="C:\Users\Natalie\code\html-me-something\Riccardo Muti.jpg">
+            </div>
+            <h1>Composer William Horne</h1>
+            <p>William Horne, composer, pianist, organist, professor, writer, and Brahms scholar, has a number of musical responsibilities to juggle. </p>
+        </article>
+        <article>
+            <div class = "crop">
+                <img src="http://38.media.tumblr.com/tumblr_mdixntbINJ1qzn0deo1_1280.jpg">
+            </div>
+            <h1>Khoma commands Bach Cello Suites</h1>
+            <p>Cellist Natalia Khoma exhibited tremendous pacing, stamina and control in a transcendent performance of Bach’s last three cello suites.</p>
+        </article>
+        <!-- <article>
+            <div class = "crop">
+                <img src="http://www.parkinggaragepolitics.com/wp-content/uploads/2013/03/Glenn-Gould-Source-Unknown.jpg">
+            </div>
+            <h1>A Prodigal Talent</h1>
+            <p>During one whirlwind summer in 1788, Mozart started and completed what would become three of his most popular symphonies.</p>
+        </article>
+        <article>
+            <div class = "crop">
+                <img src="https://cdn1-p1.udropr.com/organization-jasminechoi/video-9K0PRE4qL/thumb-l-00001.jpg?Signature=DQgHPCgk1pm6fLTY5I3F1yYOS9w-1cTkqLXg52bGtAobi3MfdXBh~h6YPeu5vwQnipzq8rgjji~e4kUu5z9nQQ0UFGGCRrEEVdJeyaoaTwuJLSZmm09Z3k1vwD7AUYw4ce0QZZRBc4ELVK2RV9YFaO6cI4hKda07MuKwhuKJ3Mgcxg0oGHVmm3hI~CxRHbpbXDgnUZM0KA2wpmidZy6J4UGaPNfvK-gcMkzTAZqgtr-wJBlcwChxGcx7CwymIKoyr-YfBT-SzbLcBgpeWyWYRrMsqas1oLwdea-0L0DWk1JqI6l1oBIu~nfvS2xKHJq6j0KDaOfB1K9p2sNzkFJRYw__&Key-Pair-Id=APKAJ5JH3L2ZNI5QDHEQ&Expires=2147483647">
+            </div>
+            <h1>Flutist Daniela Koch</h1>
+            <p>For her second album, Works for Flute and Piano, Koch compiled the most iconic sonatas in the flute repertoire—Hindemith, Reinecke, and Prokofiev—with a bit of French Enescu tossed in for good measure.</p>
+        </article> -->
+        </div>
     </body>
     </html>

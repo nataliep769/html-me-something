@@ -1,123 +1,153 @@
-#page1 {
+/*NOTES
+1) Go to color picker to find colors in an image
+2) Choose horizontal images for cover photos
+3) To tint a background image, do background-image: Tinting the background image
+  linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
+
+/*HOME PAGE */
+/*Make a table of contents*/
+/*add a Load More button to load additional blog posts?*/
+/*add three images below main image that link to spsecific blogposts. Similar to YoGoGirls site */
+/*Add nav bar called ARTICLES above articles */
+/*Do I want the nav bar to stay fixed so that it travels with the scrolling?*/
+/*Z index could come in handy */
+/*What does border-box do?
+/* CSS TRANSITION EFFECTS SO COOL. May need to know Javascript for this. Transition effect will probably have to be done with Javascript. */
+/*Usage of negative margins to go outside of container is helpful */
+/*Inserting a search bar at the top of the page?*/
+/*Margins and negative margins make the actual container bigger or smaller */
+/*experimenting with line height */
+/*using asides*/
+/*Make all images equally sized in photoshop*/
+
+html {
     color: white;
-    font-size: 100%;
-    background-image: /*This is how I tinted the background image!*/
-      /*linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
-      url(http://i64.tinypic.com/4uzx8g.jpg); /*go to color picker to find colors in an image*/
+    /* border: 30px solid #e8e8e8; */
+    /*SET A BACKGROUND IMAGE AND A BACKGROUND COLOR! */
+    background-image:
+      url(http://www.artsbeatla.com/wp-content/uploads/2016/02/Joshua-Bell.jpg);
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
     background-repeat: no-repeat;
-    background-size: cover; /*this is really helpful! Keeps the background image scaling appropriately*/
-    padding: 0;
-    margin: 0; /*Using this with the body made the extra space around the nav bar go away */
-    /*Ideally, I should probably crop the images that I want in photoshop so that they are all equal */
-    /*alter so that white blogspace scrolls up over the background image*/
-    /*crop the top of the image so it's more widescreen */
-    /*choose horizontal images for cover photos */
-    /*make another nav bar that goes above the photo? Not sure */
-    /*Put a quote over the cover image? Put a quote directly underneath the image? YUJA WANG: PIANIST*/
-}
-
-#page2 {
-    background: url(http://4.bp.blogspot.com/-RQDBdTa71f4/UTdcQSFxq3I/AAAAAAAAQpw/DLRbtUl1Jck/s1600/Hilary+Hahn.jpg); /*needed to switch from background-image to just background to text a background around the text box as well*/
     background-attachment: fixed;
-    color: rgb(44, 43, 41);
-    font-size: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-    background-size: cover; /*this is really helpful! Keeps the background image scaling appropriately*/
-    padding: 0;
-    margin: 0; /*Using this with the body made the extra space around the nav bar go away */
+    background-position: center;
+    background-size: cover; /*Keeps background image scaling appropriately.*/ /*alternatively can change this to background: cover; --MAY NEED TO CHANGE THIS FOR MOBILE/TABLET responsiveness */
+     /*margin 0 px and padding 0px are how I got rid of the space around the nav bar */
+    margin-top: 0px;
 }
 
-#name {
-    letter-spacing: .3em;
-    padding-bottom: 7%;
+/*Blog Posts */
+.blogposts_container {
+    background: #e8e8e8;
+    /*max-width: 3000px; /*got rid of extra space on the right*/
+    float: left;
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: 5%;
+    padding-top: 5%;
 }
 
-#page2_text {
-    background-color: rgba(108,83,84, .65);
-    position: absolute;
-    color: rgba(255, 255, 255, .7);
-    font-size: 15px;
-    padding-left: 3%;
-    padding-top: 1%;
+img {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: 'Cardo', serif;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+h1, h2, p {
+    padding-left: 4%;
     padding-right: 4%;
-    padding-bottom: 2%;
-    margin-left: 3%;
-    margin-right: 60%;
-    margin-bottom: 0;
-     /*change this to change the actual size of the text box */
 }
 
-#page2_text li {
-    font-family: 'Roboto Slab', serif;
-}
-
-a, a:visited {
-    text-decoration: none; /*these two propeties make the link not change color after it has been visited */
-    color: inherit;
+article {
+    width: 40%;
+    float: left;
+    letter-spacing: normal;
+    background: white;
+    background-clip: content-box, padding-box; /*Magic!!! This made background color apply to the padding */
+    height: 100%;
+    padding-left: 5%;
+    padding-bottom: 5%;
 }
 
 p {
-    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    letter-spacing: .1em;
+    color: rgba(0, 0, 0, 0.6);
+    padding-bottom: 3%;
 }
 
-nav, h1, h2, h3 {
+a, a:visited {
+    text-decoration: none; /*these two properties make the link stay the same color after it has been visited */
+    color: inherit;
+}
+
+/*ALL NAV BARS*/
+nav ul {
+    list-style: none; /*gets rid of bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center;
     text-transform: uppercase;
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
-    letter-spacing: .2em;
-}
-
-footer {
-    font-size: 14px;
-    text-align: right;
-    padding-right: 1%;
+/*UPPER NAV BAR */
+#upper_nav {
+    font-size: 26px;
+    padding-top: 3%;
     padding-bottom: 1%;
 }
+#upper_nav ul li{
+    width: 100%;
+    letter-spacing: .8em;
+}
 
-nav {
+/*MIDDLE NAV BAR */
+#mid_nav {
+    font-size: 70%;
+    text-transform: lowercase;
+    letter-spacing: .3em;
+    padding-bottom: 3%;
+}
+
+/*LOWER NAV BAR */
+#lower_nav {
+    padding-bottom: 60%; */
+}
+
+#lower_nav ul {
 	width: 100%;
-	float: left;
- }
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    margin-top: 18.5%;
-    margin-bottom: 30%;
-    padding: 0;
+    display: inline;
 }
 
-nav ul li {
+#lower_nav ul li {
     float: left;
-    font-size: .9em;
-    letter-spacing: 1.1em;
-    width: 25%;
+    font-size: 1.2em;
+    letter-spacing: .8em;
+    width: 33.333333%;
+    /*background-color :rgba(255, 0, 0, .5); */
 }
 
-nav ul li a {
+#lower_nav ul li a {
     display: block;
-    margin: 0;
-    padding-top: 20%;
-    padding-bottom: 20%;
+    padding-top: 7%;
+    padding-bottom: 7%;
     color: white;
-    text-align: center;
     text-decoration: none;
-    -o-transition: 1s; /*These properties are what make the hover fade in and out*/
+    -o-transition: 1s; /*These properties make the hover fade in and out*/
     -ms-transition: 1s;
     -moz-transition: 1s;
     -webkit-transition: 1s;
     transition: 1s;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 0, 0, .9);
-    padding-top: 25%; /* this is what I used to make the nav bar taller in height */
-    padding-bottom: 25%;
-}
-
-p {
+/*#lower_nav ul li a:hover {
+    background-color: rgba(31, 4, 1, .5);
+    padding-top: 8%;
+    padding-bottom: 8%;
+}*/
