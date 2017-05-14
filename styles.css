@@ -23,18 +23,24 @@
 /*isolate quotes to be picked out of each blog post*/
 
 #index {
-    color: white;
-    /* border: 30px solid #e8e8e8; */
-    background-image:
-      url(http://www.artsbeatla.com/wp-content/uploads/2016/02/Joshua-Bell.jpg);
+    color: black;
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
+    margin: 0px;     /*margin 0 px and padding 0px are how I got rid of the space around the nav bar */
+}
+
+.container {
+    border-left: 30px solid #e8e8e8;
+    border-right: 30px solid #e8e8e8;
+    background-image:
+      url(http://www.concours-4mains-monaco.com/wp-content/uploads/2016/09/jazzmariage-piano-4-mains.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover; /*Keeps background image scaling appropriately.*/ /*alternatively can change this to background: contain; --MAY NEED TO CHANGE THIS FOR MOBILE/TABLET responsiveness */
-     /*margin 0 px and padding 0px are how I got rid of the space around the nav bar */
-    margin-top: 0px;
+    height: 600px; /*THIS WAS THE KEY. CREATING A FIXED HEIGHT TO THE BACKGROUND IMAGE. Creating a seperate container was also important. */
+    margin: 0px;
+    padding: 0px;
 }
 
 #post {
@@ -63,7 +69,7 @@
 #post h2 {
     font-family: 'Cardo', serif;
     padding-bottom: 10%;
-    color: grey;
+    color: black;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -84,19 +90,18 @@
     background: #e8e8e8;
     /*max-width: 3000px; /*got rid of extra space on the right*/
     float: left;
-    margin-right: -8px;
-    margin-left: -8px;
-    margin-top: 5%;
-    padding-top: 5%;
+    padding-top: 3%;
+    padding-left: 1%;
 }
 
-#index .titles {
+#index .title {
     text-align: center;
+    color: black;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 24px;
     letter-spacing: .3em;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
 }
 img {
     max-width: 100%;
@@ -108,7 +113,7 @@ img {
     font-family: 'Cardo', serif;
     font-weight: bold;
     font-size: 1.7em;
-    color: rgba(0, 0, 0, 0.7);
+    color: black;
     padding-bottom: 0;
 }
 
@@ -118,20 +123,20 @@ img {
 }
 
 #index article {
-    width: 40%;
+    width: 45%;
     float: left;
     letter-spacing: normal;
     background: white;
     background-clip: content-box, padding-box; /*Magic!!! This made background color apply to the padding */
     height: 100%;
-    padding-left: 6.5%;
-    padding-bottom: 5%;
+    padding-bottom: 3%;
+    padding-left: 3%;
 }
 
 #index p {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: .05em;
-    color: rgba(0, 0, 0, 0.6);
+    color: black;
     padding-bottom: 3%;
     padding-top: 0;
 }
@@ -152,6 +157,7 @@ nav ul {
 
 nav {
     position: static;
+    color: white;
 }
 
 /*UPPER NAV BAR */
@@ -174,9 +180,6 @@ nav {
 }
 
 /*LOWER NAV BAR */
-#lower_nav {
-    padding-bottom: 64%;
-}
 
 #lower_nav ul {
 	width: 100%;
@@ -195,7 +198,6 @@ nav {
     display: block;
     padding-top: 3%;
     padding-bottom: 7%;
-    color: white;
     text-decoration: none;
     /*-o-transition: 1s; /*These properties make the hover fade in and out
     -ms-transition: 1s;
