@@ -1,5 +1,5 @@
 $(window).scroll(function(){
-    $("html").css("opacity", 1 - $(window).scrollTop() / 250);
+    $(".container").css("opacity", 1 - $(window).scrollTop() / 250);
   });
 
 /*win.scroll(function(){

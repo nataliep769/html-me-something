@@ -10,17 +10,24 @@
 /*Do I want the nav bar to stay fixed so that it travels with the scrolling?*/
 /*Z index could come in handy*/
 /*What does border-box do?
-/* CSS TRANSITION EFFECTS SO COOL. May need to know Javascript for this. Transition effect will probably have to be done with Javascript. */
+/* Javascript transition effects.*
 /*Usage of negative margins to go outside of container is helpful */
 /*Inserting a search bar at the top of the page?*/
 /*Margins and negative margins make the actual container bigger or smaller */
 /*experimenting with line height */
 /*asides*/
-/*use z-index to place hover behind text but over the background?*/
 /*Make all images equally sized in photoshop*/
 /*might need to make media queries for scaling the background image */
 /*Add space for a comment box? Refer to Woven website*/
 /*isolate quotes to be picked out of each blog post*/
+/*need more color */
+
+/*MAKE NEW POST PAGE TO-DO*/
+/*1) Make input for a pull-quote
+2) Title input
+3) Body input
+4) Automatic date/time assign to article
+5) Input photos */
 
 #index {
     color: black;
@@ -30,25 +37,39 @@
 }
 
 .container {
-    border-left: 30px solid #e8e8e8;
-    border-right: 30px solid #e8e8e8;
+    border-top: 30px solid white;
     background-image:
-      url(http://www.concours-4mains-monaco.com/wp-content/uploads/2016/09/jazzmariage-piano-4-mains.jpg);
+      url(https://paolabottomley.files.wordpress.com/2012/12/hands-on-the-pianos-keys1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover; /*Keeps background image scaling appropriately.*/ /*alternatively can change this to background: contain; --MAY NEED TO CHANGE THIS FOR MOBILE/TABLET responsiveness */
-    height: 600px; /*THIS WAS THE KEY. CREATING A FIXED HEIGHT TO THE BACKGROUND IMAGE. Creating a seperate container was also important. */
+    height: 700px; /*THIS WAS THE KEY. CREATING A FIXED HEIGHT TO THE BACKGROUND IMAGE. Creating a seperate container was also important. */
     margin: 0px;
     padding: 0px;
 }
 
-#post {
-    width: 45%;
+.post_text {
+    float: left;
     padding-left: 3%;
+    padding-bottom: 5%;
 }
 
-#post p {
+.page_summary {
+    background: white;
+    color: black;
+    height: 100px;
+    font-weight: bold;
+    font-family:'Cardo', serif;
+}
+
+.pull_quote {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+}
+.post_text p {
     padding-bottom: 0;
     letter-spacing: inherit;
     line-height: 1.75em;
@@ -56,8 +77,9 @@
     font-family: 'Cardo', serif;
 }
 
-#post h1 {
-    padding-top: 20%;
+.post_text h1 {
+    padding-top: 5%;
+    padding-bottom: 0;
     font-family: 'Lato', sans-serif;
     color: black;
     text-align: center;
@@ -66,10 +88,10 @@
     font-size: 2em;
 }
 
-#post h2 {
+.post_text h2 {
     font-family: 'Cardo', serif;
-    padding-bottom: 10%;
-    color: black;
+    padding-bottom: 5%;
+    color: rgb(180,232,231);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .1em;
@@ -78,6 +100,7 @@
 
 .firstcharacter {
   float: left;
+  color: rgb(180,232,231);
   font-size: 75px;
   line-height: 50px;
   padding-top: 4px;
@@ -90,7 +113,7 @@
     background: #e8e8e8;
     /*max-width: 3000px; /*got rid of extra space on the right*/
     float: left;
-    padding-top: 3%;
+    padding-top: 7%;
     padding-left: 1%;
 }
 
@@ -99,9 +122,9 @@
     color: black;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 18px;
     letter-spacing: .3em;
-    padding-bottom: 3%;
+    padding-bottom: 7%;
 }
 img {
     max-width: 100%;
@@ -109,10 +132,15 @@ img {
     overflow: hidden;
 }
 
+#post .post_image {
+    float: right;
+    max-width: 50%;
+}
+
 #index h1 {
     font-family: 'Cardo', serif;
     font-weight: bold;
-    font-size: 1.7em;
+    font-size: 1.5em;
     color: black;
     padding-bottom: 0;
 }
