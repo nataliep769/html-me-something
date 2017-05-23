@@ -1,33 +1,34 @@
 /*NOTES
 1) Go to color picker to find colors in an image
 2) Choose horizontal images for cover photos
-3) To tint a background image, do background-image: Tinting the background image
+3) To tint a background image, do background-image:
   linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
 
 /*HOME PAGE */
 /*Use hover over article and change tint*/
-/*Make a table of contents*/
-/*Do I want the nav bar to stay fixed so that it travels with the scrolling?*/
 /*Z index could come in handy*/
 /*What does border-box do?
 /* Javascript transition effects.*
 /*Usage of negative margins to go outside of container is helpful */
 /*Inserting a search bar at the top of the page?*/
 /*Margins and negative margins make the actual container bigger or smaller */
-/*experimenting with line height */
+/*experimenting with line height*/
 /*asides*/
 /*Make all images equally sized in photoshop*/
-/*might need to make media queries for scaling the background image */
+/*might need to make media queries for scaling the background image*/
 /*Add space for a comment box? Refer to Woven website*/
 /*isolate quotes to be picked out of each blog post*/
-/*need more color */
+/*Maybe just have a load more button on the main page that allows me to load other blog posts?*/
 
-/*MAKE NEW POST PAGE TO-DO*/
-/*1) Make input for a pull-quote
+/*MAKE NEW POST PAGE TO-DO
+1) Make input for a pull-quote
 2) Title input
 3) Body input
 4) Automatic date/time assign to article
-5) Input photos */
+5) Input photos
+6) Add links to go back home, to next article, etc.*/
+
+/*INDEX*/
 
 #index {
     color: black;
@@ -43,78 +44,65 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover; /*Keeps background image scaling appropriately.*/ /*alternatively can change this to background: contain; --MAY NEED TO CHANGE THIS FOR MOBILE/TABLET responsiveness */
-    height: 700px; /*THIS WAS THE KEY. CREATING A FIXED HEIGHT TO THE BACKGROUND IMAGE. Creating a seperate container was also important. */
+    background-size: cover; /*Keeps background image scaling appropriately. Alternatively can change this to background: contain; --MAY NEED TO CHANGE THIS FOR MOBILE/TABLET responsiveness */
+    height: 670px; /*This was key: creating a fixed height to the background image. Creating a seperate container was also important. */
     margin: 0px;
     padding: 0px;
 }
 
-.post_text {
-    float: left;
-    padding-left: 3%;
-    padding-bottom: 5%;
-}
 
-.page_summary {
+#index #page_summary {
     background: white;
     color: black;
-    height: 100px;
-    font-weight: bold;
+    height: 230px;
+}
+
+#index #page_summary #left_column {
     font-family:'Cardo', serif;
+    font-size: 24px;
+    float: left;
+    width: 50%;
 }
 
-.pull_quote {
+#index #page_summary #left_column h1 {
     text-align: center;
-    text-transform: uppercase;
-    font-family: 'Lato', sans-serif;
-    font-size: 1em;
-}
-.post_text p {
-    padding-bottom: 0;
-    letter-spacing: inherit;
-    line-height: 1.75em;
-    color: black;
-    font-family: 'Cardo', serif;
+    padding-top: 70px;
+    font-weight: lighter;
 }
 
-.post_text h1 {
-    padding-top: 5%;
-    padding-bottom: 0;
-    font-family: 'Lato', sans-serif;
-    color: black;
-    text-align: center;
+#index #page_summary #right_column {
+    float: left;
+    width: 40%;
+    padding-top: 40px;
+}
+
+#index #page_summary #right_column p {
+    font-family:'Cardo', serif;
+    font-size: 17px;
+    padding-bottom: 20px;
+}
+
+#index #page_summary #right_column h2 {
+    font-family:'Lato', sans-serif;
+    padding-bottom: 10px;
     text-transform: uppercase;
+    font-size: 18px;
     letter-spacing: .1em;
-    font-size: 2em;
 }
 
-.post_text h2 {
-    font-family: 'Cardo', serif;
-    padding-bottom: 5%;
-    color: rgb(180,232,231);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-size: 16px;
-}
-
-.firstcharacter {
-  float: left;
-  color: rgb(180,232,231);
-  font-size: 75px;
-  line-height: 50px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-}
-
-/*Blog Posts */
 .blogposts_container {
     background: #e8e8e8;
     /*max-width: 3000px; /*got rid of extra space on the right*/
     float: left;
-    padding-top: 7%;
+    padding-top: 70px;
     padding-left: 1%;
+}
+
+
+#index img {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 #index .title {
@@ -122,19 +110,9 @@
     color: black;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-size: 18px;
-    letter-spacing: .3em;
-    padding-bottom: 7%;
-}
-img {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-}
-
-#post .post_image {
-    float: right;
-    max-width: 50%;
+    font-size: 20px;
+    letter-spacing: .25em;
+    padding-bottom: 70px;
 }
 
 #index h1 {
@@ -191,8 +169,8 @@ nav {
 /*UPPER NAV BAR */
 #upper_nav {
     font-size: 30px;
-    padding-top: 3%;
-    padding-bottom: 1%;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 #upper_nav ul li{
     width: 100%;
@@ -204,7 +182,7 @@ nav {
     font-size: 70%;
     text-transform: lowercase;
     letter-spacing: .3em;
-    padding-bottom: 2%;
+    padding-bottom: 20px;
 }
 
 /*LOWER NAV BAR */
@@ -219,15 +197,13 @@ nav {
     font-size: 1em;
     letter-spacing: .8em;
     width: 33.333333%;
-    /*background-color:rgba(255, 0, 0, .5); */
 }
 
 #lower_nav ul li a {
     display: block;
-    padding-top: 3%;
-    padding-bottom: 7%;
+    padding-top: 30px;
     text-decoration: none;
-    /*-o-transition: 1s; /*These properties make the hover fade in and out
+    /*-o-transition: 1s; These properties make the hover fade in and out
     -ms-transition: 1s;
     -moz-transition: 1s;
     -webkit-transition: 1s;
@@ -236,5 +212,60 @@ nav {
 
 article:hover {
     background: rgba(178, 39, 69, .15);
-    background-clip: content-box, padding-box; /*Yay!!!! This is a really helpful trick*/
+    background-clip: content-box, padding-box; /*Yay! This is a really helpful trick*/
+}
+
+/*POST PAGE */
+
+.post_text {
+    float: left;
+    padding-left: 3%;
+    padding-bottom: 5%;
+}
+
+.post_text p {
+    padding-bottom: 0;
+    letter-spacing: inherit;
+    line-height: 1.75em;
+    color: black;
+    font-family: 'Cardo', serif;
+}
+
+.post_text h1 {
+    padding-top: 5%;
+    padding-bottom: 0;
+    font-family: 'Lato', sans-serif;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 2em;
+}
+
+.post_text h2 {
+    font-family: 'Cardo', serif;
+    padding-bottom: 5%;
+    color: rgb(180,232,231);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: 16px;
+}
+
+.drop_cap {
+  float: left;
+  color: rgb(180,232,231);
+  font-size: 75px;
+  line-height: 50px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+
+.pull_quote {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
 }
