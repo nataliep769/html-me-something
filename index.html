@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <!-- Add about section at bottom or leave comment section -->
 <!-- need to link to the javascript file -->
-<!-- perhaps keep the number of words for each header description equal. Figure out a way to do this in Java/Python -->
+<!-- perhaps keep the number of words for each header description equal. Figure out a way to do this in Java -->
 <!-- Can specify image height and width in HTML in source tag -->
+<!-- Perhaps also have a page where I post links to articles written by others, e.g. Jeremy Denk -->
+<!-- refer to this website for style ideas http://themes.lucid-themes.com/origin/ -->
+<!-- The project needs three specific features: a feature is something that does one specific thing for your application -->
+
+<!-- TODO -->
+<!-- Make tabs for next post and previous post -->
+<!-- Put a horizontal image at the top of each post page -->
+<!-- Need to be able to remove and edit posts -->
+<!-- Create a login page for admin -->
+
+<!-- PROBLEMS I solved -->
+<!-- Keep track of problems that I have been solving and how I solved them -->
+<!-- Cropping images in Photoshop to make them equally scaled and so the articles align correctly-->
 <html>
     <head>
         <meta charset = "UTF-8">
@@ -12,20 +25,20 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
     </head>
-    <body id = "index">
-        <div class = "container">
+    <body id="index">
+        <div class="container">
             <script src="javascript.js"></script>
-            <nav id = "upper_nav">
+            <nav id="upper_nav">
                 <ul>
                     <li><a href="index.html">Between the Notes</a></li>
-                <ul>
+                </ul>
             </nav>
-            <nav id = "mid_nav">
+            <nav id="mid_nav">
                 <ul>
                     <li>|a classical music blog|</li>
-                <ul>
+                </ul>
             </nav>
-            <nav id = "lower_nav">
+            <nav id="lower_nav">
                 <ul>
                     <li><a href="post.html">The Music</a></li>
                     <li><a href="contact.asp">Contact</a></li>
@@ -33,38 +46,47 @@
                 </ul>
             </nav>
         </div>
-        <div id = "page_summary">
-            <div id ="left_column">
+        <!--<div id="page_summary">
+            <div id="left_column">
                 <h1><i>for</i> <b>musicians</b> <i>and</i> <b>writers</b></h1>
             </div>
             <div id="right_column">
                 <h2>About</h2>
-                <p>Written by a flutist whose career was ended by focal dystonia, this blog explores the intrapersonal struggles and victories of those pursuing careers in music.</p>
+                <p>Written by a flutist living with focal dystonia, this blog explores the intrapersonal struggles and victories of those pursuing careers in music.</p>
             </div>
-            <!--<p><i>for</i><b> musicians </b><i>and</i><b> writers </b></p> -->
-        </div>
-        <div class="blogposts_container">
-            <h1 class="title">The Music</h1>
-            <article>
-                    <img src="http://i66.tinypic.com/2r7ace0.jpg">
-                <h1>Decay in ‘Decasia’</h1>
-                <p>Michael Gordon’s score for “Decasia” is viscerally unpleasant. But that’s not to say that the listening experience was devoid of value.</p>
-            </article>
-            <article>
-                    <img src="http://alegriamagazine.com/alegriamagazine/wp-content/uploads/2014/01/gustavo-dudamel.jpg">
-                <h1>The One Ring</h1>
-                <p>Berlioz's Treatise on Instrumentation serves as a leading resource for composers on writing evocative music for full orchestra.</p>
-            </article>
-            <article>
-                    <img src="http://i66.tinypic.com/2m2uj2r.jpg">
-                <h1>Composer William Horne</h1>
-                <p>William Horne, composer, pianist, organist, professor, writer, and Brahms scholar, has a number of musical responsibilities to juggle. </p>
-            </article>
-            <article>
-                    <img src="http://38.media.tumblr.com/tumblr_mdixntbINJ1qzn0deo1_1280.jpg">
-                <h1>Khoma commands Bach Suites</h1>
-                <p>Cellist Natalia Khoma exhibited tremendous pacing, stamina and control in a transcendent performance of Bach’s last three cello suites.</p>
-            </article>
+            <p><i>for</i><b> musicians </b><i>and</i><b> writers </b></p>
+        </div> -->
+        <div id="blogposts_container">
+            <h1 class="title">The Musicians</h1>
+            <div id="articles_container">
+                <article>
+                        <img src="http://i66.tinypic.com/2r7ace0.jpg" class="image">
+                        <div class="article_text">
+                            <h1>Decay in ‘Decasia’</h1>
+                            <p>Michael Gordon’s score for “Decasia” is viscerally unpleasant. But that’s not to say that the listening experience was devoid of value.</p>
+                        </div>
+                </article>
+                <article>
+                        <img src="http://alegriamagazine.com/alegriamagazine/wp-content/uploads/2014/01/gustavo-dudamel.jpg" class="image">
+                        <div class="article_text">
+                            <h1>The One Ring</h1>
+                            <p>Berlioz's Treatise on Instrumentation serves as a leading resource for composers on writing evocative music for full orchestra.</p>
+                        </div>
+                </article>
+                <article>
+                    <img src="http://i66.tinypic.com/2m2uj2r.jpg" class="image">
+                    <div class="article_text">
+                        <h1>Composer William Horne</h1>
+                        <p>William Horne, composer, pianist, organist, professor, writer, and Brahms scholar, has a number of musical responsibilities to juggle. </p>
+                    </div>
+                </article>
+                <article>
+                    <img src="http://38.media.tumblr.com/tumblr_mdixntbINJ1qzn0deo1_1280.jpg" class="image">
+                    <div class="article_text">
+                        <h1>Khoma commands Bach Suites</h1>
+                        <p>Cellist Natalia Khoma exhibited tremendous pacing, stamina and control in a transcendent performance of Bach’s last three cello suites.</p>
+                    </div>
+                </article>
             <!-- <article>
                 <div class = "crop">
                     <img src="http://www.parkinggaragepolitics.com/wp-content/uploads/2013/03/Glenn-Gould-Source-Unknown.jpg">
@@ -79,6 +101,14 @@
                 <h1>Flutist Daniela Koch</h1>
                 <p>For her second album, Works for Flute and Piano, Koch compiled the most iconic sonatas in the flute repertoire—Hindemith, Reinecke, and Prokofiev—with a bit of French Enescu tossed in for good measure.</p>
             </article> -->
+            </div>
+            <h4>Load More</h4>
         </div>
-    </body>
-    </html>
+        <footer>
+            <div id="footer_div">
+                <img src="http://2.bp.blogspot.com/-n9jGHJJMg4s/Tpn6sjR-cQI/AAAAAAAAAX0/7NZ7esKDrPw/s1600/SFP-HilaryHahn-02.jpg">
+                <h1 id="about_title">About</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Itaque homo in primis ingenuus et gravis. </p>
+                <p>Tum Lucius: Mihi vero ista valde probata sunt, quod item fratri puto. Scio enim esse quosdam, qui quavis lingua philosophari possint; Sin aliud quid voles, postea. Negare non possum. Sed finge non solum callidum eum, qui aliquid improbe faciat, verum etiam praepotentem, ut M. Sed haec omittamus; Atqui perspicuum est hominem e corpore </p>
+            </div>
+        </footer>

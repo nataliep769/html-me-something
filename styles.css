@@ -5,35 +5,38 @@
   linear-gradient(rgba(239,25,4,.05),rgba(239,25,4,.05)),*/
 
 /*HOME PAGE */
+/*Use text-align instead of float*/
+/*fade the top image*/
 /*Use hover over article and change tint*/
-/*Z index could come in handy*/
-/*What does border-box do?
-/* Javascript transition effects.*
+/*Z-index could come in handy*/
+/*What does border-box do?*/
+/*Javascript transition effects.
 /*Usage of negative margins to go outside of container is helpful */
-/*Inserting a search bar at the top of the page?*/
 /*Margins and negative margins make the actual container bigger or smaller */
 /*experimenting with line height*/
-/*asides*/
 /*Make all images equally sized in photoshop*/
 /*might need to make media queries for scaling the background image*/
-/*Add space for a comment box? Refer to Woven website*/
-/*isolate quotes to be picked out of each blog post*/
+/*Make a button/tab to listen to the music on the page*/
 /*Maybe just have a load more button on the main page that allows me to load other blog posts?*/
+/*Make a container that holds the articles? Maybe set min and max values for the paddings. Smaller margins, more padding?*/
 
 /*MAKE NEW POST PAGE TO-DO
-1) Make input for a pull-quote
 2) Title input
 3) Body input
 4) Automatic date/time assign to article
 5) Input photos
-6) Add links to go back home, to next article, etc.*/
-
+6) Add links to go back home, to next article, etc.
+7) Way to edit blog posts
+8) Way to remove blog posts
+9) Find a way to scale the length of the lines to match with text box
+/*subtract from the margins for line styling above the footer with previous and next */
 /*INDEX*/
 
 #index {
     color: black;
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
+    background:#edecec;
     margin: 0px;     /*margin 0 px and padding 0px are how I got rid of the space around the nav bar */
 }
 
@@ -51,20 +54,20 @@
 }
 
 
-#index #page_summary {
+/*#index #page_summary {
     background: white;
     color: black;
-    height: 230px;
+    height: 40px;
 }
 
-#index #page_summary #left_column {
+/* #index #page_summary #left_column {
     font-family:'Cardo', serif;
     font-size: 24px;
     float: left;
     width: 50%;
 }
 
-#index #page_summary #left_column h1 {
+ #index #page_summary #left_column h1 {
     text-align: center;
     padding-top: 70px;
     font-weight: lighter;
@@ -73,12 +76,12 @@
 #index #page_summary #right_column {
     float: left;
     width: 40%;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 #index #page_summary #right_column p {
     font-family:'Cardo', serif;
-    font-size: 17px;
+    font-size: 16px;
     padding-bottom: 20px;
 }
 
@@ -88,14 +91,18 @@
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: .1em;
-}
+}*/
 
-.blogposts_container {
-    background: #e8e8e8;
-    /*max-width: 3000px; /*got rid of extra space on the right*/
-    float: left;
+#blogposts_container {
+    background: #edecec;
     padding-top: 70px;
-    padding-left: 1%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: block;
+    max-width: 1000px;
+    width: 100%;
+    vertical-align: baseline; /*This is key! Use this and margin: 0 auto and get rid of float: left to center the container */
 }
 
 
@@ -128,18 +135,25 @@
     padding-right: 4%;
 }
 
+#blogposts_container h4 {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding-bottom: 2%;
+}
+
 #index article {
     width: 45%;
     float: left;
     letter-spacing: normal;
     background: white;
-    background-clip: content-box, padding-box; /*Magic!!! This made background color apply to the padding */
+    background-clip: content-box, padding-box; /*Magic! This made background color apply to the padding */
     height: 100%;
-    padding-bottom: 3%;
-    padding-left: 3%;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    vertical-align: baseline;
 }
 
-#index p {
+#blogposts_container p {
     font-size: 14px;
     letter-spacing: .05em;
     color: black;
@@ -210,21 +224,27 @@ nav {
     transition: 1s; */
 }
 
-article:hover {
+/*#index .article_text:hover{
     background: rgba(178, 39, 69, .15);
-    background-clip: content-box, padding-box; /*Yay! This is a really helpful trick*/
+} */
+
+#index article:hover .image {
+  opacity: 0.3;
 }
 
 /*POST PAGE */
-
 .post_text {
     float: left;
-    padding-left: 3%;
     padding-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .post_text p {
     padding-bottom: 0;
+    padding-left: 0;
     letter-spacing: inherit;
     line-height: 1.75em;
     color: black;
@@ -252,6 +272,7 @@ article:hover {
     font-size: 16px;
 }
 
+/*SPECIFIC TYPE STYLES*/
 .drop_cap {
   float: left;
   color: rgb(180,232,231);
@@ -265,7 +286,103 @@ article:hover {
 
 .pull_quote {
     text-align: center;
+    padding-left: 30%;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
-    font-size: 1em;
+    font-size: 1.25em;
+    letter-spacing: .1em;
+    width: 45%;
+}
+
+/*NEXT AND PREVIOUS PAGE FOOTER LINKS*/
+
+.post_text #post_footer_nav {
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: .2em;
+    margin-top: 50px;
+    border-top: 1px solid #f5f5f5;
+    border-width: thin;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+#post_footer_nav #left{
+    float: left;
+}
+
+#post_footer_nav #right{
+    text-align: right;
+}
+
+#post_footer_nav h5 {
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    line-height: 5px;
+    color: rgb(180,232,231);
+}
+
+#post_footer_nav h4 {
+    font-size: 17px;
+    font-weight: lighter;
+    line-height: 0px;
+    font-family: 'Lato', sans-serif;
+    color: rgb(105, 105, 105);
+}
+
+/*INDEX FOOTER */
+footer {
+    clear: both;
+    background: #e5e5e5;
+    padding-top: 2%;
+    height: 360px; /*using min- and max-heights? */
+}
+
+footer #footer_div {
+    padding-left: 2%;
+    width: 95%;
+    background: white;
+    margin: 0;
+    background-clip: content-box, padding-box; /*MAGIC */
+    height: 95%;
+}
+footer img {
+    float: left;
+    padding-right: 4%;
+    background: white;
+    padding-top: 3%;
+    padding-left: 3%;
+    height: 75%;
+}
+
+footer p {
+    background: white;
+    float: left;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    line-height: 2.1em;
+    width: 62%;
+    padding-left: 0px;
+}
+
+footer #about_title{
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    padding-left: 0px;
+    padding-bottom: 2%;
+    padding-top: 3%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 62%;
+    background: white;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .2em;
 }
